@@ -23,13 +23,12 @@ import java.util.List;
 
 import okhttp3.Headers;
 
-/*Log tags are used to track run instead of using breakpoints*/
 
 public class MainActivity extends AppCompatActivity {
 
     //class constants
-   public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=2a416fc12ab6087a10380559b344cb2d";
-   public static final String TAG = "MainActivity";
+    public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=2a416fc12ab6087a10380559b344cb2d";
+    public static final String TAG = "MainActivity";
 
    //instance variable
    List<Movie> movies;
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //binding
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         // layout of activity is stored in a special property called root
         View view = binding.getRoot();

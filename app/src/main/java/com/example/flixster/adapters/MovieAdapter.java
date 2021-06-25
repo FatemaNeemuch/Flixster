@@ -29,6 +29,7 @@ import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
+    //instance variables
     Context context;
     List<Movie> movies;
 
@@ -64,6 +65,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+        //instance variables
         TextView tvTitle;
         TextView tvOverview;
         ImageView ivPoster;
@@ -78,10 +80,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         }
 
         public void bind(Movie movie) {
+            //bind the views to the data they are supposed to show
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
             Log.d("MovieAdapter", movie.getPosterpath());
+            //poster picture depends on orientation of the screen
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+                //loads backdrop with rounded corners and placeholder image
                 Glide.with(context)
                         .load(movie.getBackdroppath())
                         .fitCenter()
@@ -89,6 +94,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                         .placeholder(R.drawable.flicks_backdrop_placeholder)
                         .into(ivPoster);
             }else {
+                //loads poster with rounded corners and placeholder image
                 Glide.with(context)
                         .load(movie.getPosterpath())
                         .fitCenter()

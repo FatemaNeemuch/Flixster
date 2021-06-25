@@ -20,6 +20,7 @@ public class Movie {
     String releaseDate;
     Integer id;
 
+    //default constructor for Parcel
     public Movie() {
     }
 
@@ -43,6 +44,8 @@ public class Movie {
         }
         return movies;
     }
+
+    //getter methods
 
     public Integer getId() {
         return id;
