@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".models.MovieDetailsActivity">
+
+    <TextView
+        android:id="@+id/tvAMDTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/ivPicture"
+        android:fontFamily="@font/adamina"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        tools:text="Luca" />
+
+    <TextView
+        android:id="@+id/tvAMDOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="517dp"
+        android:layout_above="@+id/rbVoteAverage"
+        android:layout_below="@+id/tvAMDTitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="false"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/adamina"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:scrollbars = "vertical"
+        tools:text="Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface." />
+
+    <RatingBar
+        android:id="@+id/rbVoteAverage"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginLeft="81dp"
+        android:layout_marginBottom="0dp"
+        android:background="#00000000"
+        android:backgroundTint="#006E0F7E"
+        android:backgroundTintMode="multiply"
+        android:numStars="5"
+        android:progressBackgroundTint="#FFFFFF"
+        android:stepSize="0.5" />
+
+    <TextView
+        android:id="@+id/tvReleasedate"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="18dp"
+        android:layout_toEndOf="@+id/tvtextRD"
+        android:fontFamily="@font/adamina"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:text="2021-06-17" />
+
+    <TextView
+        android:id="@+id/tvtextRD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="369dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/adamina"
+        android:text="Release Date: "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/ivPicture"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvAMDOverview"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="-83dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/ivbutton"
+        android:layout_width="56dp"
+        android:layout_height="42dp"
+        android:layout_alignTop="@id/ivPicture"
+        android:layout_alignBottom="@id/ivPicture"
+        android:layout_alignLeft="@id/ivPicture"
+        android:layout_alignRight="@id/ivPicture"
+        android:src="@drawable/play_button" />
+
+</RelativeLayout>

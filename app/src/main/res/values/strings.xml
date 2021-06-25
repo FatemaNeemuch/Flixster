@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flixster</string>
+    <string name="youtube_api_key">AIzaSyDL1m9yCzy4H9bR3ahtzgR9k3MXQsmuI0c</string>
+    <string name="tmdb_api_key">2a416fc12ab6087a10380559b344cb2d</string>
+</resources>
