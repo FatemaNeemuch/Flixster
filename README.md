@@ -24,13 +24,13 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] Added release date on Movie Details Activity
-* [ ] Converted the app to dark mode with a black background and white text
-* [ ] Added a landscape layout for Movie Details Activity
+* [x] Added release date on Movie Details Activity
+* [x] Converted the app to dark mode with a black background and white text
+* [x] Added a landscape layout for Movie Details Activity
     - Used horizontal movie backdrop instead of vertical movie poster
     - Rearranged the layout of the rating bar and release date
-* [ ] Made the overview scrollable in portrait and landscape mode in Movie Details Activity
-* [ ] Added a play button over movie posters and backdrops in Movie Details Activity to
+* [x] Made the overview scrollable in portrait and landscape mode in Movie Details Activity
+* [x] Added a play button over movie posters and backdrops in Movie Details Activity to
       show that it could be clicked to watch the movie trailer
 
 
