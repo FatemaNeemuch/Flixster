@@ -31,11 +31,8 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
         // unwrap the movie passed in via intent, using its simple name as a key
         videoId = getIntent().getStringExtra(MovieDetailsActivity.class.getSimpleName());
 
-        // resolve the player view from the layout
-        YouTubePlayerView playerView = binding.player;
-
         Log.d(TAG, "YoutubeID: " + videoId);
-        playerView.initialize(getString(R.string.youtube_api_key), new YouTubePlayer.OnInitializedListener() {
+        binding.player.initialize(getString(R.string.youtube_api_key), new YouTubePlayer.OnInitializedListener() {
             //if success
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider,

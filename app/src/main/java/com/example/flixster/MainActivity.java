@@ -41,17 +41,16 @@ public class MainActivity extends AppCompatActivity {
         // layout of activity is stored in a special property called root
         View view = binding.getRoot();
         setContentView(view);
-        RecyclerView rvMovies = binding.rvMovies;
         movies = new ArrayList<>();
 
         //Create the adapter
         MovieAdapter movieAdapter = new MovieAdapter(this, movies);
 
         //Set the adapter on the recycler view
-        rvMovies.setAdapter(movieAdapter);
+        binding.rvMovies.setAdapter(movieAdapter);
 
         //Set a Layout Manager on the recycler view
-        rvMovies.setLayoutManager(new LinearLayoutManager(this));
+        binding.rvMovies.setLayoutManager(new LinearLayoutManager(this));
 
         //sending a network request
         AsyncHttpClient client = new AsyncHttpClient();

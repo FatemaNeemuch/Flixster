@@ -2,7 +2,6 @@ package com.example.flixster.models;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -36,11 +35,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
     //instance variable
     Movie movie;
-    TextView tvAMDTitle;
-    TextView tvAMDOverview;
-    RatingBar rbVoteAverage;
-    TextView tvReleasedate;
-    Context context;
     ImageView ivPicture;
     String videoId;
     ImageView ivbutton;
@@ -54,10 +48,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         // resolve the view objects
-        tvAMDTitle = binding.tvAMDTitle;
-        tvAMDOverview = binding.tvAMDOverview;
-        rbVoteAverage = binding.rbVoteAverage;
-        tvReleasedate = binding.tvReleasedate;
         ivPicture = binding.ivPicture;
         ivbutton = binding.ivbutton;
 
@@ -78,12 +68,12 @@ public class MovieDetailsActivity extends AppCompatActivity {
         Log.d("MovieDetailsActivity", String.format("Showing details for '%s'", movie.getTitle()));
 
         // set the title and overview
-        tvAMDTitle.setText(movie.getTitle());
-        tvAMDOverview.setText(movie.getOverview());
+        binding.tvAMDTitle.setText(movie.getTitle());
+        binding.tvAMDOverview.setText(movie.getOverview());
         //allow the overview to be scrollable
-        tvAMDOverview.setMovementMethod(new ScrollingMovementMethod());
+        binding.tvAMDOverview.setMovementMethod(new ScrollingMovementMethod());
         //set the release date
-        tvReleasedate.setText(movie.getReleaseDate());
+        binding.tvReleasedate.setText(movie.getReleaseDate());
         // Loads picture based on screen orientation
         if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             //loads backdrop with rounded corners and placeholder image
@@ -105,7 +95,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         // vote average is 0..10, convert to 0..5 by dividing by 2
         float voteAverage = movie.getVoteAverage().floatValue();
-        rbVoteAverage.setRating(voteAverage / 2.0f);
+        binding.rbVoteAverage.setRating(voteAverage / 2.0f);
 
         //sending a network request
         AsyncHttpClient ytclient = new AsyncHttpClient();
