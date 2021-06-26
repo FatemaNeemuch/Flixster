@@ -24,7 +24,15 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [ ] Added release date on Movie Details Activity
+* [ ] Converted the app to dark mode with a black background and white text
+* [ ] Added a landscape layout for Movie Details Activity
+    - Used horizontal movie backdrop instead of vertical movie poster
+    - Rearranged the layout of the rating bar and release date
+* [ ] Made the overview scrollable in portrait and landscape mode in Movie Details Activity
+* [ ] Added a play button over movie posters and backdrops in Movie Details Activity to
+      show that it could be clicked to watch the movie trailer
+
 
 ## Video Walkthrough
 
@@ -37,7 +45,9 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Describe any challenges encountered while building the app:
+
+I had difficulty with adding the YouTube trailers and uploading my project to github. Getting the videoId was confusing at first, but once I was able to figure that out my code was complete. However, I was still having trouble playing the video and that was due to YouTube not being updated and the emulator not being able to display the video. I then updated YouTube and switched to testing on my phone and everything worked perfectly. My trouble with uploading my project to github came from git making multiple branches and the gif files being too large. I did a lot of troubleshooting and was eventually able to make my gif files smaller and upload everything to the main branch and delete any extra branches.
 
 ## Open-source libraries used
 
